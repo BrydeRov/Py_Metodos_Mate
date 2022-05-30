@@ -21,6 +21,9 @@ def f(t, y):
     func = 10 - (y/t)
     return func
 
+def f_ex(t):
+    f_ex = (5*t) + (t/2)
+    return f_ex
 
 def titulo():
     print('\nMétodo de Heun & Euler | Javier Camacho & Humberto Orozco\n')
