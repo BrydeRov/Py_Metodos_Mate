@@ -3,6 +3,10 @@ import matplotlib as plt
 from math import *
 import numpy as np
 import os
+import math
+
+
+
 
 global t
 t = float
@@ -18,11 +22,11 @@ global errorAbs
 errorAbs = float   
 
 def f(t, y):
-    func = 10 - (y/t)
+    func = ((3*y) + (2*t))
     return func
 
 def f_ex(t):
-    f_ex = (5*t) + (t/2)
+    f_ex = np.exp((3*t) + (pow(t,2)))
     return f_ex
 
 def titulo():
