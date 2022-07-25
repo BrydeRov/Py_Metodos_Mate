@@ -8,7 +8,6 @@ titulo()
 def Euler(t,y,h,N):
     print("Euler")
     print("\nAproximada\n")
-    y_exacta = y
     t_exacta = t
 
     for k in range(N+1):
@@ -29,17 +28,18 @@ def Euler(t,y,h,N):
          
 def Heun(t,y,h,N):
     print("Heun\n")
-    y_exacta = y
     t_exacta = t
 
     for k in range(N):
         print('y(',round(t, 2),')=', round(y, 4))
         funcion_exacta = f_ex(t_exacta)
         ErrorAbsoluto = abs(funcion_exacta - y)
-        ErrorRelativo = (ErrorAbsoluto / (abs(funcion_exacta)) )
-        y0 = y+h*f(t,y)
-        y = y+(h/2)*(f(t,y)+f(t, y0))
-        t = t+h        
+        ErrorRelativo = (ErrorAbsoluto / (abs(funcion_exacta)))
+        y0 = y+h*g(w)
+        w0 = w+h*f(t ,y, w)
+        y = y + (h/2) * (g(w) + g(w0))
+        w = w + (h/2)*(f(t + h, y0, w0) + f(t, y, w))
+        t = t+h       
         print(
             "\t\t\t==========", '\t\t\ty(',round(t_exacta, 2),')=',round(funcion_exacta, 4),
             "\t\t\t==========\t\t\t", ErrorAbsoluto,

@@ -5,9 +5,6 @@ import numpy as np
 import os
 import math
 
-
-
-
 global t
 t = float
 global y
@@ -19,15 +16,21 @@ N = int
 global y0
 y0 = float
 global errorAbs 
-errorAbs = float   
+errorAbs = float  
+e=2.718281 
 
 def f(t, y):
-    func = ((3*y) + (2*t))
-    return func
+    return ((3*y) + (2*t))
+
+def f(t,y,w):
+    return (2 * math.exp(t)) - (2 * w) - y
+
+def g(w): 
+    return w
+
 
 def f_ex(t):
-    f_ex = np.exp((3*t) + (pow(t,2)))
-    return f_ex
+    return ((-1/2) (math.exp(-t)) + (1/2) * t * (math.exp(-t)) + math.exp(t)) /2
 
 def titulo():
     print('\nMétodo de Heun & Euler | Javier Camacho & Humberto Orozco\n')
