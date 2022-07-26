@@ -23,14 +23,13 @@ def f(t, y):
     return ((3*y) + (2*t))
 
 def f(t,y,w):
-    return (2 * math.exp(t)) - (2 * w) - y
+    return (2 * exp(t)) - (2 * w) - y    
 
 def g(w): 
     return w
 
-
 def f_ex(t):
-    return ((-1/2) (math.exp(-t)) + (1/2) * t * (math.exp(-t)) + math.exp(t)) /2
+    return ((-1/2) * (exp(-t)) + (1/2) * t * (exp(-t)) + exp(t)) /2
 
 def titulo():
     print('\nMétodo de Heun & Euler | Javier Camacho & Humberto Orozco\n')

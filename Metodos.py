@@ -12,7 +12,6 @@ def Euler(t,y,h,N):
 
     for k in range(N+1):
         print(k+1,")\t",'y(',round(t, 4),')=', round(y, 4))
-        print()
         funcion_exacta = f_ex(t_exacta)
         ErrorAbsoluto = abs(funcion_exacta - y)
         ErrorRelativo = ((ErrorAbsoluto) / (abs(funcion_exacta)))              
@@ -26,7 +25,7 @@ def Euler(t,y,h,N):
         t_exacta = t_exacta + h
         
          
-def Heun(t,y,h,N):
+def Heun(t, y,w, h,N):
     print("Heun\n")
     t_exacta = t
 
@@ -55,9 +54,9 @@ def Heun(t,y,h,N):
 print("\n")
 
 
-Euler(0,2/9,0.05,100)
 print("\n")
-Heun(0,2/9,0.05,100)
+Heun(0, 0, 1, 0.05, 10)
+#    t, y, yd, h, n
 
 reinicio()
 
