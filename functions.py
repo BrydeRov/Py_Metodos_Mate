@@ -1,23 +1,5 @@
-import numpy as np
-import matplotlib as plt
 from math import *
-import numpy as np
 import os
-import math
-
-global t
-t = float
-global y
-y = float
-global h
-h = float
-global N
-N = int
-global y0
-y0 = float
-global errorAbs 
-errorAbs = float  
-e=2.718281 
 
 def f(t, y):
     return ((3*y) + (2*t))
@@ -30,13 +12,11 @@ def g(w):
     return w
 
 def f_ex(t):
-    # return ((-1/2) * (exp(-t)) + (1/2) * t * (exp(-t)) + exp(t)) /2
-    return 
+    return ((1) * (sin(2*t)) + (sqrt(3)) * cos(2 * t))
 
 def titulo():
-    print('\nMétodo de Heun & Euler | Javier Camacho & Humberto Orozco\n')
-    print("La ecuación es f(y,t) | y'= 10 - (t/y)\n")
-
+    print('\nMétodo de disparo para Valores de Frontera | Javier Camacho & Humberto Orozco\n')
+    print("La ecuación es y'' + 4y, y(0) = √3, y(π/6) = √3\n")
 
 
 def reinicio():
@@ -46,5 +26,3 @@ def reinicio():
         os.system("py Metodos.py")
     else:
         exit()
-
-
